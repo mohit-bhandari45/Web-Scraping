@@ -1,12 +1,12 @@
 import requests as rq
-from bs4 import BeautifulSoup
 
-response = rq.get("https://www.geeksforgeeks.org/python-programming-language-tutorial/")
-print(response)
+url = "https://timesofindia.indiatimes.com/technology/tech-tips/how-to-create-ghibli-style-anime-art-using-google-gemini-for-free/articleshow/119754131.cms"
 
-soup = BeautifulSoup(response.content, "html.parser")
+def fetchUrlAndSaveToFile(url, path):
+    r = rq.get(url)
 
-s = soup.find("div", class_="entry-content")
-content = soup.find_all("p")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(r.text)
 
-print(content)
+
+fetchUrlAndSaveToFile(url, "data/times.html") 
