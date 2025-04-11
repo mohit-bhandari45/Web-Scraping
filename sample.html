@@ -2,28 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harry</title>
+    <title>Sample HTML with Many Siblings (Classes & IDs)</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .box {
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #ccc;
+      }
+    </style>
   </head>
   <body>
-    <div class="harry"><!-- Hey I am Harry --></div>
-    <div class="harry">Hey I am also Harry</div>
-    <a href="https://www.google.com">Google</a>
-    <span class="First pehal">
-      <a href="https://www.youtube.com">Youtube</a>
-    </span>
-    <a id="link3" href="/data/sample.html"></a>
-    <div class="italic">Italic</div>
-    <div class="italic">Italic</div>
-    <div class="italic">Italic</div>
-    <span id="italic">Italic</span>
+    <!-- Div Siblings -->
+    <div class="box sibling-div" id="div1">Div 1</div>
+    <div class="box sibling-div" id="div2">Div 2</div>
+    <div class="box sibling-div" id="div3">Div 3</div>
 
-    <div class="container" editable="true">
-      <div class="box">I am a box</div>
-      <div class="box">I am a box</div>
-      <div class="box">I am a box</div>
-      <div class="box">I am a box</div>
-    </div>
-    <div class="container"></div>
+    <!-- Paragraph Siblings -->
+    <p class="sibling-p" id="p1">Paragraph 1</p>
+    <p class="sibling-p" id="p2">Paragraph 2</p>
+    <p class="sibling-p" id="p3">Paragraph 3</p>
+
+    <!-- List Item Siblings -->
+    <ul class="sibling-ul" id="ul1">
+      <li class="sibling-li" id="li1">Item 1</li>
+      <li class="sibling-li" id="li2">Item 2</li>
+      <li class="sibling-li" id="li3">Item 3</li>
+    </ul>
+
+    <!-- Section with Article Siblings -->
+    <section class="sibling-section" id="section1">
+      <h2 class="section-heading" id="heading1">Section Heading</h2>
+      <article class="sibling-article" id="article1">Article 1</article>
+      <article class="sibling-article" id="article2">Article 2</article>
+      <article class="sibling-article" id="article3">Article 3</article>
+    </section>
+
+    <!-- Navigation Links -->
+    <nav class="sibling-nav" id="nav1">
+      <a href="#home" class="nav-link" id="nav-home">Home</a>
+      <a href="#about" class="nav-link" id="nav-about">About</a>
+      <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+    </nav>
+
+    <!-- Footer with Sibling Spans -->
+    <footer class="sibling-footer" id="footer1">
+      <span class="footer-span" id="footer-left">Footer Left</span>
+      <span class="footer-span" id="footer-right">Footer Right</span>
+    </footer>
   </body>
 </html>

@@ -112,3 +112,59 @@
 # tag = soup.name_of_tag
 # print(tag)
 # print(tag.name)
+
+
+# -------------------- Getting Tag Attribute ----------------------------
+# from bs4 import BeautifulSoup 
+  
+# # Initialize the object with a HTML page 
+# soup = BeautifulSoup(''' 
+#     <html> 
+#         <h2 class="first second third"> Heading 1 </h2> 
+#         <h1> Heading 2 </h1> 
+#     </html> 
+#     ''', "lxml") 
+
+# tag = soup.h2
+# # print(tag.attrs)
+# print(tag["class"])
+ 
+ 
+# -------------------- Modifying the tree ----------------------------
+
+# importing module
+from bs4 import BeautifulSoup
+
+markup = """<p class="para">gfg</p>
+
+
+
+
+"""
+
+# parsering string to HTML
+soup = BeautifulSoup(markup, 'html.parser')
+
+# extracting a tag
+tag = soup.p
+# print(tag)
+
+# modifying tag name
+tag.name = "div"
+# print(tag)
+
+# modifying its class attribute
+# tag['class'] = "div_class"
+# print(tag)
+
+# adding new attribute
+# tag['id'] = "div_id"
+# print(tag)
+
+# to delete any attributes
+# del tag["class"]
+# print(tag)
+
+# modifying the tags content
+# tag.string = "Geeks"
+# print(tag)
